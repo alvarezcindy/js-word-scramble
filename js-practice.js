@@ -73,12 +73,6 @@ console.log(getCandy('teal'));
 // Write a function that takes an array of colors and returns an array of the
 //corresponding flavors. If the map doesn’t have the color, add null to the array.
 
-// console.log();
-// console.log();
-// console.log();
-// console.log();
-// console.log();
-
 const colors = ['purple', 'red', 'blue', 'green', 'magenta'];
 
 function getColorFlavors(colors) {
@@ -89,7 +83,6 @@ function getColorFlavors(colors) {
 		} else {
 			flavors.push(null);
 		}
-
 	}
 	return flavors;
 }
