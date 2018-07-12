@@ -38,17 +38,60 @@ const candy = new Map();
 // Set five colors as keys in the map and flavors as the values, for instance “purple”
 // could be “grape”.
 
-candy.set('purple', 'grape');
-candy.set('red', 'cherry');
-candy.set('green', 'lime');
-candy.set('yellow', 'banana');
-candy.set('orange', 'orange');
+candy.set('purple', 'grape')
+	.set('red', 'cherry')
+	.set('green', 'lime')
+	.set('yellow', 'banana')
+	.set('orange', 'orange');
 
 // Iterate over the candy flavors to print “The x flavor is colored y.” for each
 
-for ([color, flavor] of candy.entries()) {
+for (let [color, flavor] of candy.entries()) {
 	console.log('The', flavor, 'flavor is colored', color );
 }
 
 // Get the value of a color from the map, and see what happens when you try getting a value
 // of a color that doesn’t exist.
+
+console.log(candy.get('green')); 
+console.log(candy.get('blue')); // > undefined
+
+// Functions
+// Write a function that takes a color and the candy map. It should return the 
+//flavor or if it’s not in the map, console log “Sorry, that color doesn’t have a flavor” and return nothing.
+function getCandy(color) {
+	if (candy.get(color)) {
+		return candy.get(color);
+	} else {
+		console.log('Sorry, that color doesn\'t have a flavor.');
+	}
+}
+
+console.log(getCandy('yellow'));
+console.log(getCandy('teal'));
+
+// Write a function that takes an array of colors and returns an array of the
+//corresponding flavors. If the map doesn’t have the color, add null to the array.
+
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+
+const colors = ['purple', 'red', 'blue', 'green', 'magenta'];
+
+function getColorFlavors(colors) {
+	let flavors = [];
+	for (let color of colors) {
+		if (candy.get(color)) {
+			flavors.push(candy.get(color));
+		} else {
+			flavors.push(null);
+		}
+
+	}
+	return flavors;
+}
+
+console.log(getColorFlavors(colors));
