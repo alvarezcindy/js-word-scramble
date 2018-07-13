@@ -1,7 +1,23 @@
 // Create a function that reverses a word
 
+function reverseWord(string) {
+	let newString = '';
+	let i = string.length;
+	while (i >= 0) {
+		let newLetter = string.charAt(i);
+		newString = newString + newLetter;
+		i -= 1;
+	}
+	return newString;
+}
+
+console.log(reverseWord('palindrome'))
+
 // Create a function that takes an array of words and returns a new array of the
- // words with each word reversed.
+// words with each word reversed.
+
+
+
 
 // Create a function that returns a random word from an array
 
