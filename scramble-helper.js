@@ -26,15 +26,26 @@ function reverseArray(words) {
 
 console.log(reverseArray(['hello', 'goodbye', 'tacocat']))
 
-
-
 // Create a function that returns a random word from an array
+
+function randomWord(words) {
+	let index = Math.floor(Math.random() * words.length);
+	return words[index];
+}
+
+console.log(randomWord(['hi', 'bye', 'yo', 'howdy', 'au revoir', 'adios']));
 
 // Create an array of words and save it to a variable. Using your functions create
 // a second array of reversed words.
 
+const greetings = ['hi', 'bye', 'yo', 'howdy', 'au revoir', 'adios'];
+const revGreetings = reverseArray(greetings);
+console.log(revGreetings);
+
 // We could use the two arrays we've created to select a random word to show the user
 // and check their guess. How could we do that? Is there a better way?
+
+
 
 
 // ////////////////////////////////////////////////////////////////////////////
