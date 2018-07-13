@@ -1,14 +1,14 @@
 // Create a function that reverses a word
 
-function reverseWord(string) {
-	let newString = '';
-	let i = string.length;
+function reverseWord(word) {
+	let newWord = '';
+	let i = word.length;
 	while (i >= 0) {
-		let newLetter = string.charAt(i);
-		newString = newString + newLetter;
+		let newLetter = word.charAt(i);
+		newWord = newWord + newLetter;
 		i -= 1;
 	}
-	return newString;
+	return newWord;
 }
 
 console.log(reverseWord('palindrome'))
@@ -16,6 +16,15 @@ console.log(reverseWord('palindrome'))
 // Create a function that takes an array of words and returns a new array of the
 // words with each word reversed.
 
+function reverseArray(words) {
+	let reversedWords = [];
+	for (let word of words) {
+		reversedWords.push(reverseWord(word));
+	}
+	return reversedWords
+}
+
+console.log(reverseArray(['hello', 'goodbye', 'tacocat']))
 
 
 
